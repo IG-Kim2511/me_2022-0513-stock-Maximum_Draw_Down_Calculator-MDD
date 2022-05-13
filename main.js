@@ -23,6 +23,8 @@ btnE.addEventListener('click',()=>{
         
     }
     
+    wkHighE.value  = "";
+    nowE.value ="";
 });
 
 

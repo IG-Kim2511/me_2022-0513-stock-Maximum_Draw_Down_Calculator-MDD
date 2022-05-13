@@ -185,20 +185,7 @@
     list-style: none;
   }
   
-  img{
-    /*
-    container크기에 맞춤
-    width: 100%; 
-    */
-  
-  
-    /* all same size */
-    float: left;
-    width:  200px;
-    height: 200px;
-    object-fit: cover;
-  }
-  
+
   /* ??!! span의 좁은 블럭 설정 바꾸기
     
     block: div : 한줄 전체를 차지함
