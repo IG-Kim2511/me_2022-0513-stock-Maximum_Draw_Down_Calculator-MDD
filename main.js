@@ -19,7 +19,7 @@ btnE.addEventListener('click',()=>{
         resultE.innerHTML = `error : put the number please`;
         
     } else {
-        resultE.innerHTML = `전 고점대비 - ${result}% 하락`;
+        resultE.innerHTML += `<div>- ${result}% 하락</div>`;
         
     }
     
@@ -28,7 +28,24 @@ btnE.addEventListener('click',()=>{
 });
 
 
+// nowE.addEventListener('input',()=>{
+//     console.log(nowE.value)
 
+//     result = (wkHighE.value - nowE.value) / wkHighE.value *100
+
+    
+//     // 🦄 isNaN(result)
+//     if (isNaN(result)) {
+//         resultE.innerHTML = `error : put the number please`;
+        
+//     } else {
+//         resultE.innerHTML = `전 고점대비 - ${result}% 하락`;
+        
+//     }
+    
+//     wkHighE.value  = "";
+//     nowE.value ="";
+// });
 
 
 
