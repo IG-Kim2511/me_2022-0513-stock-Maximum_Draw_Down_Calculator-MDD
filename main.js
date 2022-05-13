@@ -1,7 +1,7 @@
 const wkHighE = document.querySelector('.wkHigh');
 const nowE = document.querySelector('.now');
 const resultE = document.querySelector('.result');
-const btnE = document.querySelector('.btn');
+const btnE = document.querySelector('.myBtn');
 
 
 //  = (52주 최고가 - 현재주가) / 52주 최고가 
@@ -13,7 +13,15 @@ btnE.addEventListener('click',()=>{
 
     result = (wkHighE.value - nowE.value) / wkHighE.value *100
 
-    resultE.innerHTML = `전 고점대비 - ${result}% 하락`;
+    
+    // 🦄 isNaN(result)
+    if (isNaN(result)) {
+        resultE.innerHTML = `error : put the number please`;
+        
+    } else {
+        resultE.innerHTML = `전 고점대비 - ${result}% 하락`;
+        
+    }
     
 });
 
