@@ -1,3 +1,4 @@
+const nameE = document.querySelector('.name');
 const wkHighE = document.querySelector('.wkHigh');
 const nowE = document.querySelector('.now');
 const resultE = document.querySelector('.result');
@@ -23,7 +24,7 @@ btnE.addEventListener('click',()=>{
         
     }
     else {
-        resultE.innerHTML += `<div>- ${result}% 하락</div>`;
+        resultE.innerHTML += `<div> ${nameE.value}  - ${result}% 하락</div>`;
         
     }
     
