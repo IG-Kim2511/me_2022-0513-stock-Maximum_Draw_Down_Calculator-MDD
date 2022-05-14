@@ -18,13 +18,17 @@ btnE.addEventListener('click',()=>{
     if (isNaN(result)) {
         resultE.innerHTML = `error : put the number please`;
         
-    } else {
+    } else if (result <= 0) {     
+        resultE.innerHTML =   `error : already highest price`;
+        
+    }
+    else {
         resultE.innerHTML += `<div>- ${result}% 하락</div>`;
         
     }
     
-    wkHighE.value  = "";
-    nowE.value ="";
+    // wkHighE.value  = "";
+    // nowE.value ="";
 });
 
 
