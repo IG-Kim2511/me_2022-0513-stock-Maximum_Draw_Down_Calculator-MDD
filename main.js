@@ -17,14 +17,14 @@ btnE.addEventListener('click',()=>{
     
     // 🦄 isNaN(result)
     if (isNaN(result)) {
-        resultE.innerHTML = `error : put the number please`;
+        resultE.innerHTML += `<div>error : put the number please</div>`;
         
     } else if (result <= 0) {     
-        resultE.innerHTML =   `error : already highest price`;
+        resultE.innerHTML +=   `<div>error : already highest price</div>`;
         
     }
     else {
-        resultE.innerHTML += `<div> ${nameE.value}  - ${result}% 하락</div>`;
+        resultE.innerHTML += `<div> ${nameE.value}  - ${parseFloat(result).toFixed(2)}% 하락</div>`;
         
     }
     
