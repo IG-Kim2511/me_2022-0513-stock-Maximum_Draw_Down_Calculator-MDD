@@ -2,14 +2,16 @@ const nameE = document.querySelector('.name');
 const wkHighE = document.querySelector('.wkHigh');
 const nowE = document.querySelector('.now');
 const resultE = document.querySelector('.result');
-const btnE = document.querySelector('.myBtn');
 
+
+const goB = document.querySelector('.go');
+const clearB =document.querySelector('.clear');
 
 //  = (52주 최고가 - 현재주가) / 52주 최고가 
 // const result = wkHighE.value
 
 let result =0;
-btnE.addEventListener('click',()=>{
+goB.addEventListener('click',()=>{
     console.log(nowE.value)
 
     result = (wkHighE.value - nowE.value) / wkHighE.value *100
@@ -28,8 +30,7 @@ btnE.addEventListener('click',()=>{
         
     }
     
-    // wkHighE.value  = "";
-    // nowE.value ="";
+  
 });
 
 
@@ -53,6 +54,11 @@ btnE.addEventListener('click',()=>{
 // });
 
 
+clearB.addEventListener('click',()=>{
+  wkHighE.value  = "";
+    nowE.value ="";
+    nameE.value ="";
+});
 
 
 
