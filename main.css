@@ -12,6 +12,7 @@ section{
 }
 .MDD input{
     padding: 1rem;
+    margin: 0.5rem;
     border: 1px solid black;
 
     background-color: lightgray;
@@ -22,6 +23,8 @@ section{
 button{
     margin: 1rem;
 }
+
+
 
 .go{
     background: green;
