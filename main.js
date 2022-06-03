@@ -1,18 +1,17 @@
-const nameE = document.querySelector('.name');
-const wkHighE = document.querySelector('.wkHigh');
-const nowE = document.querySelector('.now');
-const resultE = document.querySelector('.result');
-
-
-const goB = document.querySelector('.go');
-const clearB =document.querySelector('.clear');
-
 
 // 🍀MDD Calculator
 //  = (52주 최고가 - 현재주가) / 52주 최고가 
 // (a-b) / a *100 = c
 
 // const result = wkHighE.value
+
+const nameE = document.querySelector('.MDD .name');
+const wkHighE = document.querySelector('.MDD .wkHigh');
+const nowE = document.querySelector('.MDD .now');
+const resultE = document.querySelector('.MDD .result');
+
+const goB = document.querySelector('.MDD .go');
+const clearB =document.querySelector('.MDD .clear');
 
 let result =0;
 goB.addEventListener('click',()=>{
@@ -31,11 +30,8 @@ goB.addEventListener('click',()=>{
     }
     else {
         resultE.innerHTML += `<div> ${nameE.value}  - ${parseFloat(result).toFixed(2)}% 하락</div>`;
-        console.log(result)
-        
-    }
-    
-  
+        console.log(result)        
+    }    
 });
 
 
@@ -67,7 +63,7 @@ clearB.addEventListener('click',()=>{
 
 
 
-// 🍀0603 Now vlaue Calculator for MDD value  (원하는 mdd나오는 현재 값 구하기)
+// 🍀0603 price Now vlaue Calculator for MDD value  (원하는 mdd나오는 현재 값 구하기)
 // 52주 최고가 - (MDD값 / 100 * 52주 최고가) = 현재주가
 // a - (c / 100 * a) = b
 
