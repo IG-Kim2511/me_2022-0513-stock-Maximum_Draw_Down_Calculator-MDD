@@ -38,17 +38,17 @@ section{
 }
 
 /*  */
-
-.now{
+/* 
+.priceNow{
     padding-top: 10rem;
 }
 
-.now h1,
-.now .result{
+.priceNow h1,
+.priceNow .result{
     padding: 2rem;
 }
 
-.now input{
+.priceNow input{
     padding: 1rem;
     margin: 0.5rem;
     border: 1px solid black;
@@ -58,18 +58,18 @@ section{
 }
 
 
-.now button{
+.priceNow button{
     margin: 1rem;
 }
 
 
 
-.now .go{
+.priceNow .go{
     background: green;
 
 }
 
-.now .clear{
+.priceNow .clear{
     background: lightcoral;
 
-}
+} */

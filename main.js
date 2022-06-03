@@ -69,7 +69,42 @@ clearB.addEventListener('click',()=>{
 
 
 
+// const nowNameE = document.querySelector('.priceNow .name');
+// const nowWkHighE = document.querySelector('.priceNow .wkHigh');
+// const nowNowE = document.querySelector('.priceNow .now');
+// const nowResultE = document.querySelector('.priceNow .result');
 
+// const nowGoB = document.querySelector('.priceNow .go');
+// const nowClearB =document.querySelector('.priceNow .clear');
+
+// // let result =0;
+// nowGoB.addEventListener('click',()=>{
+//     console.log(nowNowE.value)
+
+//     result = (nowWkHighE.value - nowNowE.value) / nowWkHighE.value *100
+
+    
+//     // 🦄 isNaN(result)
+//     if (isNaN(result)) {
+//         nowResultE.innerHTML += `<div>error : put the number please</div>`;
+        
+//     } else if (result <= 0) {     
+//         nowResultE.innerHTML +=   `<div> price now값 :  ${nowNameE.value}   ${parseFloat(result).toFixed(2)} $</div>`;
+        
+//     }
+//     else {
+//         nowResultE.innerHTML += `<div> price now값 :  ${nowNameE.value}   ${parseFloat(result).toFixed(2)} $</div>`;
+//         console.log(result)        
+//     }    
+// });
+
+
+// nowClearB.addEventListener('click',()=>{
+//     nowWkHighE.value  = "";
+//     nowNowE.value ="";
+//     nowNameE.value ="";
+//   });
+  
 
 
 
