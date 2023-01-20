@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="limit">
+
+        <h1>Limit Order Calculator </h1>
+        <div>
+            <input type="text" class="name" placeholder="Name">
+            <input type="number" class="target-percent" placeholder="Target Percentage %">
+            <input type="number" class="now-average" placeholder="Current Average Cost">
+            <div>
+                <button class="myBtn go">Calculate</button>
+                <button class="myBtn clear">Clear</button>
+            </div>
+            <h3 class="result-text">Result:</h3>
+            <div class="result"></div>
+        </div>
+
+    </section>
+
+    <script>
+        function calculate() {
+            const name = document.querySelector('.limit .name').value;
+            const targetPercent = document.querySelector('.limit .target-percent').value;
+            const nowAverage = document.querySelector('.limit .now-average').value;
+            const resultElem = document.querySelector('.limit .result');
+
+            if (isNaN(targetPercent) || isNaN(nowAverage)) {
+                resultElem.innerHTML = `<div class="error-message">Error: Please enter a valid number.</div>`;
+                return;
+            }
+
+            if (targetPercent >= 100) {
+                resultElem.innerHTML = `<div class="error-message">Error: Target percentage must be less than 100%.</div>`;
+                return;
+            }
+
+            const result = nowAverage + (nowAverage * (targetPercent / 100));
+            resultElem.innerHTML = `<div> ${name}  - ${parseFloat(result).toFixed(2)}</div>`;
+        }
+
+        document.querySelector('.limit .go').addEventListener('click', calculate);
+
+        document.querySelector('.limit .clear').addEventListener('click', () => {
+            document.querySelector('.limit .name').value = '';
+            document.querySelector('.limit .target-percent').value = '';
+            document.querySelector('.limit .now-average').value = '';
+            document.querySelector('.limit .result').innerHTML = '';
+        });
+    </script>
+</body>
+
+</html>

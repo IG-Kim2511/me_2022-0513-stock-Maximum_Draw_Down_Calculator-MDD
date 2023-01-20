@@ -16,8 +16,15 @@ const clearB =document.querySelector('.MDD .clear');
 let result =0;
 goB.addEventListener('click',()=>{
     console.log(nowE.value)
+    console.log(typeof nowE.value)
+    console.log(wkHighE.value)
+    console.log(typeof wkHighE.value)
+
 
     result = (wkHighE.value - nowE.value) / wkHighE.value *100
+
+    console.log(result)
+    console.log(typeof result)
 
     
     // 🦄 isNaN(result)
@@ -64,51 +71,85 @@ clearB.addEventListener('click',()=>{
 
 
 // 🍀limit order calculater 
+/* 
+현재 average cost a
 
+목표 % :  b (+6%, +10%, -6%)
 
+limit order 목표 가격 ????
+
+a +a /100 * b = ???
+*/
 
 const nameE_limit = document.querySelector('.limit .name');
 const target_percentE = document.querySelector('.limit .target-percent');
 const now_averageE = document.querySelector('.limit .now-average');
-const resultE_limit = document.querySelector('.limit .result');
+// const target_percentE = document.querySelector('.limit .target-percent');
+// const now_averageE = document.querySelector('.limit .now-average');
+
+const resultE_limitE = document.querySelector('.limit .result');
 
 const goB_limit = document.querySelector('.limit .go');
 const clearB_limit =document.querySelector('.limit .clear');
 
-let result_limit =0;
-goB.addEventListener('click',()=>{
-    console.log(nowE.value)
+let result_limit = 0;
+console.log(typeof result_limit)
 
-    result_limit = (wkHighE.value - nowE.value) / wkHighE.value *100
+goB_limit.addEventListener('click',()=>{
+
+    console.log(now_averageE.value)
+    console.log(target_percentE.value)
+    console.log(parseFloat(now_averageE.value))
+    console.log(typeof parseFloat(now_averageE.value))
+    console.log(typeof target_percentE.value)
 
     
-    // 🦄 isNaN(result)
-    if (isNaN(result_limit)) {
-        resultE.innerHTML += `<div>error : put the number please</div>`;
+    result_limit = parseFloat(now_averageE.value) + (parseFloat(now_averageE.value)/100 * parseFloat(target_percentE.value));
+
+    console.log(result_limit)
+    console.log(typeof result_limit)
+
+
+    let result_limit2 =0
+    result_limit2 = now_averageE.value + now_averageE.value;
+
+    console.log( result_limit2)
+
+
+
+console.log(parseFloat(result_limit).toFixed(2))
+
+
+    // // 🦄 isNaN(result)
+    // if (isNaN(result_limit)) {
+    //     resultE.innerHTML += `<div>error : put the number please</div>`;
         
-    } else if (result_limit <= 0) {     
-        resultE.innerHTML +=   `<div>error : already highest price</div>`;
+    // } else if (result_limit <= 0) {     
+    //     resultE.innerHTML +=   `<div>error : already highest price</div>`;
         
-    }
-    else {
-        resultE.innerHTML += `<div> ${nameE.value}  - ${parseFloat(result_limit).toFixed(2)}% 하락</div>`;
-        console.log(result_limit)        
-    }    
+    // }
+    // else {
+    //     resultE.innerHTML += `<div> ${nameE.value}  - ${parseFloat(result_limit).toFixed(2)}% 하락</div>`;
+    //     console.log(result_limit)        
+    // }    
+
+
 });
 
-clearB.addEventListener('click',()=>{
-  wkHighE.value  = "";
-    nowE.value ="";
-    nameE.value ="";
-});
+// clearB_limit.addEventListener('click',()=>{
+//   wkHighE.value  = "";
+//     nowE.value ="";
+//     nameE.value ="";
+// });
 
 
+/* 
+const targetPercent = parseFloat(document.querySelector('.limit .target-percent').value);
+const nowAverage = parseFloat(document.querySelector('.limit .now-average').value);
+const result = nowAverage + (nowAverage * (targetPercent / 100));
 
 
-
-
-
-
+*/
 
 
 
