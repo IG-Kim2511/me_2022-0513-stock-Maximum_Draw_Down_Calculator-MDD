@@ -102,38 +102,26 @@ goB_limit.addEventListener('click',()=>{
     console.log(parseFloat(now_averageE.value))
     console.log(typeof parseFloat(now_averageE.value))
     console.log(typeof target_percentE.value)
-
     
+    // 목표 가격 = 현재가격 + 현재가격 /100 * 목표 percent
     result_limit = parseFloat(now_averageE.value) + (parseFloat(now_averageE.value)/100 * parseFloat(target_percentE.value));
 
     console.log(result_limit)
     console.log(typeof result_limit)
+    console.log(parseFloat(result_limit).toFixed(2))
 
-
-    let result_limit2 =0
-    result_limit2 = now_averageE.value + now_averageE.value;
-
-    console.log( result_limit2)
-
-
-
-console.log(parseFloat(result_limit).toFixed(2))
-
-
-    // // 🦄 isNaN(result)
-    // if (isNaN(result_limit)) {
-    //     resultE.innerHTML += `<div>error : put the number please</div>`;
+    // 🦄 isNaN(result)
+    if (isNaN(result_limit)) {
+        resultE_limitE.innerHTML += `<div>error : put the number please</div>`;
         
-    // } else if (result_limit <= 0) {     
-    //     resultE.innerHTML +=   `<div>error : already highest price</div>`;
+    } else if (result_limit <= 0) {     
+        resultE_limitE.innerHTML +=   `<div>error : already highest price</div>`;
         
-    // }
-    // else {
-    //     resultE.innerHTML += `<div> ${nameE.value}  - ${parseFloat(result_limit).toFixed(2)}% 하락</div>`;
-    //     console.log(result_limit)        
-    // }    
-
-
+    }
+    else {
+        resultE_limitE.innerHTML += `<div> ${nameE_limit.value}  ${parseFloat(result_limit).toFixed(2)} $ </div>`;
+        console.log(result_limit)        
+    }    
 });
 
 // clearB_limit.addEventListener('click',()=>{
