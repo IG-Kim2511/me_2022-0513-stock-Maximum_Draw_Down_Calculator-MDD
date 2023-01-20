@@ -105,12 +105,8 @@ goB_limit.addEventListener('click',()=>{
     if (isNaN(result_limit)) {
         resultE_limitE.innerHTML += `<div>error : put the number please</div>`;
         
-    } else if (result_limit <= 0) {     
-        resultE_limitE.innerHTML +=   `<div>error : already highest price</div>`;
-        
-    }
-    else {
-        resultE_limitE.innerHTML += `<div> ${nameE_limit.value}  ${parseFloat(result_limit).toFixed(2)} $ </div>`;
+    } else {
+        resultE_limitE.innerHTML += `<div> buy or sell limit order 목표가격 ${nameE_limit.value}  ${parseFloat(result_limit).toFixed(2)} $ </div>`;
         console.log(result_limit)        
     }    
 });
