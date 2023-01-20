@@ -71,24 +71,15 @@ clearB.addEventListener('click',()=>{
 
 
 // 🍀limit order calculater 
-/* 
-현재 average cost a
-
-목표 % :  b (+6%, +10%, -6%)
-
-limit order 목표 가격 ????
-
-a +a /100 * b = ???
-*/
 
 const nameE_limit = document.querySelector('.limit .name');
+
 const target_percentE = document.querySelector('.limit .target-percent');
 const now_averageE = document.querySelector('.limit .now-average');
 // const target_percentE = document.querySelector('.limit .target-percent');
 // const now_averageE = document.querySelector('.limit .now-average');
 
 const resultE_limitE = document.querySelector('.limit .result');
-
 const goB_limit = document.querySelector('.limit .go');
 const clearB_limit =document.querySelector('.limit .clear');
 
@@ -124,11 +115,11 @@ goB_limit.addEventListener('click',()=>{
     }    
 });
 
-// clearB_limit.addEventListener('click',()=>{
-//   wkHighE.value  = "";
-//     nowE.value ="";
-//     nameE.value ="";
-// });
+clearB_limit.addEventListener('click',()=>{
+    target_percentE.value  = "";
+    now_averageE.value ="";
+    nameE_limit.value ="";
+});
 
 
 /* 

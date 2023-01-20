@@ -14,6 +14,8 @@
     <section class="MDD">
 
         <h1>Stock-Maximum Draw Down Calculator (MDD)</h1>
+
+        <h3>result = (wkHighE - nowE) / wkHighE *100</h3>
         <div>
             <input type="text" class="name" placeholder="name">
             <input type="text" class="wkHigh" placeholder="52 Weeks high">
@@ -48,6 +50,7 @@
     <section class="limit">
 
         <h1> 목표 가격 limit order calculater </h1>
+        <h3> 목표 가격 = 현재가격 + 현재가격 /100 * 목표 percent</h3>
         <div>
             <input type="text" class="name" placeholder="name">
             <input type="text" class="target-percent" placeholder="목표 target-percent %">
