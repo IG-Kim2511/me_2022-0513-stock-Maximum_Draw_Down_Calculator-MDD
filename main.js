@@ -63,6 +63,55 @@ clearB.addEventListener('click',()=>{
 
 
 
+// 🍀limit order calculater 
+
+
+
+const nameE_limit = document.querySelector('.limit .name');
+const target_percentE = document.querySelector('.limit .target-percent');
+const now_averageE = document.querySelector('.limit .now-average');
+const resultE_limit = document.querySelector('.limit .result');
+
+const goB_limit = document.querySelector('.limit .go');
+const clearB_limit =document.querySelector('.limit .clear');
+
+let result_limit =0;
+goB.addEventListener('click',()=>{
+    console.log(nowE.value)
+
+    result_limit = (wkHighE.value - nowE.value) / wkHighE.value *100
+
+    
+    // 🦄 isNaN(result)
+    if (isNaN(result_limit)) {
+        resultE.innerHTML += `<div>error : put the number please</div>`;
+        
+    } else if (result_limit <= 0) {     
+        resultE.innerHTML +=   `<div>error : already highest price</div>`;
+        
+    }
+    else {
+        resultE.innerHTML += `<div> ${nameE.value}  - ${parseFloat(result_limit).toFixed(2)}% 하락</div>`;
+        console.log(result_limit)        
+    }    
+});
+
+clearB.addEventListener('click',()=>{
+  wkHighE.value  = "";
+    nowE.value ="";
+    nameE.value ="";
+});
+
+
+
+
+
+
+
+
+
+
+
 // 🍀0603 price Now vlaue Calculator for MDD value  (원하는 mdd나오는 현재 값 구하기)
 // 52주 최고가 - (MDD값 / 100 * 52주 최고가) = 현재주가
 // a - (c / 100 * a) = b
