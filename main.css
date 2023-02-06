@@ -76,6 +76,25 @@ section{
 
 }
 
+.button-container-parents {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container-parents .button-container{
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+
+
+
 /*  */
 /* 
 .priceNow{
@@ -112,3 +131,4 @@ section{
     background: lightcoral;
 
 } */
+
