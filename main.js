@@ -36,7 +36,7 @@ goB.addEventListener('click',()=>{
         
     }
     else {
-        resultE.innerHTML += `<div> ${nameE.value}  - ${parseFloat(result).toFixed(2)}% 하락</div>`;
+        resultE.innerHTML += `<div> ${nameE.value}  - ${parseFloat(result).toFixed(2)}% decline</div>`;
         console.log(result)        
     }    
 });
