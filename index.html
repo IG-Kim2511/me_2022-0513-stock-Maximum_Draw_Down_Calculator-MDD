@@ -109,20 +109,7 @@
 
     <!--🍀 RS 계산식 (와인슈타너) -->
 
-    <div>​
-        🍀RS  (번역가가 수정한 RS계산법 : 각 1주일일간의 상승률로 계산)<br>
-        👉 rs계산법 : 주식가격 1주일​ 상승률 / index 가격 1주일 상승률 <br>
-        ​<br>
-        ex) (2023.2월 챗gpt때문에 마소가 엄청 오르고, 구글이 엄청 떨어지던 시기)​​<br>
-        지난 일주일간 상승률 : index -1.4%, 마이크로 소프트 : -0.73%, 구글 : -8.8%<br>
-        a주식 : -1.4/-0.73 = 1.91<br>
-        b주식 : -1.4/-8.8 = 0.15<br>
-        
-        ​<br>
-        index지수에 비해서, 어느정도 오르는지 보여주는 척도​<br>
-        (index보다 Tesla가 더 많이 오른다면 좋은주식)​<br>
-        1주일에 한번정도 계산해서 패턴파악하는걸로 충분<br>
-    </div>
+
     <section class="RS">
 
         <h1> RS 계산식 (와인슈타너) </h1>
@@ -130,8 +117,8 @@
         <h3>result = (wkHighE - nowE) / wkHighE *100</h3>
         <div>
             <input type="text" class="name" placeholder="name">
-            <input type="text" class="wkHigh" placeholder="highest price or 52W high">
-            <input type="text" class="now" placeholder="Price now">
+            <input type="text" class="wkHigh" placeholder=" index ETF가격 1주일 상승률">
+            <input type="text" class="now" placeholder="주식가격 1주일 상승률">
             <div>
                 <button class="myBtn clear">clear</button>
                 <button class="myBtn go">go calc</button>
@@ -139,6 +126,20 @@
             <h3 class="result">result</h3>
         </div>
 
+        <div>​
+            🍀RS  (번역가가 수정한 RS계산법 : 각 1주일일간의 상승률로 계산)<br>
+            👉 rs계산법 : 주식가격 1주일 상승률 / index 가격 1주일 상승률 <br>
+            <br>
+            ex) (2023.2월 챗gpt때문에 마소가 엄청 오르고, 구글이 엄청 떨어지던 시기) <br>
+            지난 일주일간 상승률 : index -1.4%, 마이크로 소프트 : -0.73%, 구글 : -8.8%<br>
+            a주식 : -1.4/-0.73 = 1.91<br>
+            b주식 : -1.4/-8.8 = 0.15<br>
+            
+            <br>
+            index지수에 비해서, 어느정도 오르는지 보여주는 척도​<br>
+            (index보다 Tesla가 더 많이 오른다면 좋은주식)<br>
+            1주일에 한번정도 계산해서 패턴파악하는걸로 충분<br>
+        </div>
     </section>
 
 
