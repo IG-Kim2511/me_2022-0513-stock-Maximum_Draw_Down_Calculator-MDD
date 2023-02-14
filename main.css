@@ -119,7 +119,28 @@ section{
 
 /* 🍀limit */
 
+/* RS */
 
+.RS input{
+    padding: 1rem;
+    margin: 0.5rem;
+    border: 1px solid black;
+
+    background-color: lightgray;
+    border-radius: 0.3rem;
+}
+
+.RS .go{
+    background: green;
+
+}
+
+.RS .clear{
+    background: lightcoral;
+
+}
+
+/* RS */
 
 /*  */
 /* 
