@@ -14,6 +14,39 @@ document
 
 
 
+// 🍀RS calculater 
+
+const RS_nameE = document.querySelector('.RS .name');
+const RS_index = document.querySelector('.RS .index');
+const RS_stock = document.querySelector('.RS .stock');
+const RS_resultE = document.querySelector('.RS .result');
+
+const RS_goB = document.querySelector('.RS .go');
+const RS_clearB =document.querySelector('.RS .clear');
+
+let result_RS =0;
+RS_goB.addEventListener('click',()=>{
+  
+    result_RS = RS_index.value/ RS_stock.value
+
+    console.log(result_RS)
+    console.log(typeof result_RS)
+
+    
+    // 🦄 isNaN(result)
+    if (isNaN(result_RS)) {
+        RS_resultE.innerHTML += `<div>error : put the number please</div>`;
+        
+    } else if (result_RS <= 0) {     
+        RS_resultE.innerHTML +=   `<div>error : already highest price</div>`;
+        
+    }
+    else {
+        RS_resultE.innerHTML += `<div> ${RS_nameE.value} RS:  ${parseFloat(result_RS).toFixed(2)}</div>`;
+        console.log(result_RS)        
+    }    
+});
+
 // 🍀MDD Calculator
 //  = (52주 최고가 - 현재주가) / 52주 최고가 
 // (a-b) / a *100 = c
@@ -134,51 +167,3 @@ clearB_limit.addEventListener('click',()=>{
 
 
 
-
-
-// // 🍀RS calculater 
-
-// const nameE_RS = document.querySelector('.RS .name');
-
-// const RS_target_percentE = document.querySelector('.RS .target-percent');
-// const RS_now_averageE = document.querySelector('.RS .now-average');
-// // const target_percentE = document.querySelector('.RS .target-percent');
-// // const now_averageE = document.querySelector('.RS .now-average');
-
-// const resultE_RSE = document.querySelector('.RS .result');
-// const goB_RS = document.querySelector('.RS .go');
-// const clearB_RS =document.querySelector('.RS .clear');
-
-// let result_RS = 0;
-// console.log(typeof result_RS)
-
-// goB_RS.addEventListener('click',()=>{
-
-//     console.log(now_averageE.value)
-//     console.log(target_percentE.value)
-//     console.log(parseFloat(now_averageE.value))
-//     console.log(typeof parseFloat(now_averageE.value))
-//     console.log(typeof target_percentE.value)
-    
-//     // 목표 가격 = 현재가격 + 현재가격 /100 * 목표 percent
-//     result_RS = parseFloat(now_averageE.value) + (parseFloat(now_averageE.value)/100 * parseFloat(target_percentE.value));
-
-//     console.log(result_RS)
-//     console.log(typeof result_RS)
-//     console.log(parseFloat(result_RS).toFixed(2))
-
-//     // 🦄 isNaN(result)
-//     if (isNaN(result_RS)) {
-//         resultE_RSE.innerHTML += `<div>error : put the number please</div>`;
-        
-//     } else {
-//         resultE_RSE.innerHTML += `<div> buy or sell RS order 목표가격 ${nameE_RS.value}  ${parseFloat(result_RS).toFixed(2)} $ </div>`;
-//         console.log(result_RS)        
-//     }    
-// });
-
-// clearB_RS.addEventListener('click',()=>{
-//     target_percentE.value  = "";
-//     now_averageE.value ="";
-//     nameE_RS.value ="";
-// });
