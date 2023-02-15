@@ -84,7 +84,7 @@ goB.addEventListener('click',()=>{
         
     }
     else {
-        resultE.innerHTML += `<div> ${nameE.value}  - ${parseFloat(result).toFixed(2)}% decline</div>`;
+        resultE.innerHTML += `<div> ${nameE.value}  : ${parseFloat(result).toFixed(2)}% </div>`;
         console.log(result)        
     }    
 });
