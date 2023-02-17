@@ -13,40 +13,6 @@ document
 });
 
 
-
-// 🍀RS calculater 
-
-const RS_nameE = document.querySelector('.RS .name');
-const RS_index = document.querySelector('.RS .index');
-const RS_stock = document.querySelector('.RS .stock');
-const RS_resultE = document.querySelector('.RS .result');
-
-const RS_goB = document.querySelector('.RS .go');
-const RS_clearB =document.querySelector('.RS .clear');
-
-let result_RS =0;
-RS_goB.addEventListener('click',()=>{
-  
-    result_RS = RS_index.value/ RS_stock.value
-
-    console.log(result_RS)
-    console.log(typeof result_RS)
-
-    
-    // 🦄 isNaN(result)
-    if (isNaN(result_RS)) {
-        RS_resultE.innerHTML += `<div>error : put the number please</div>`;
-        
-    } else if (result_RS <= 0) {     
-        RS_resultE.innerHTML +=   `<div>error : already highest price</div>`;
-        
-    }
-    else {
-        RS_resultE.innerHTML += `<div> ${RS_nameE.value} RS:  ${parseFloat(result_RS).toFixed(2)}</div>`;
-        console.log(result_RS)        
-    }    
-});
-
 // 🍀MDD Calculator
 //  = (52주 최고가 - 현재주가) / 52주 최고가 
 // (a-b) / a *100 = c
@@ -115,6 +81,40 @@ clearB.addEventListener('click',()=>{
     nowE.value ="";
     nameE.value ="";
 });
+
+// 🍀RS calculater 
+
+const RS_nameE = document.querySelector('.RS .name');
+const RS_index = document.querySelector('.RS .index');
+const RS_stock = document.querySelector('.RS .stock');
+const RS_resultE = document.querySelector('.RS .result');
+
+const RS_goB = document.querySelector('.RS .go');
+const RS_clearB =document.querySelector('.RS .clear');
+
+let result_RS =0;
+RS_goB.addEventListener('click',()=>{
+  
+    result_RS = RS_index.value/ RS_stock.value
+
+    console.log(result_RS)
+    console.log(typeof result_RS)
+
+    
+    // 🦄 isNaN(result)
+    if (isNaN(result_RS)) {
+        RS_resultE.innerHTML += `<div>error : put the number please</div>`;
+        
+    } else if (result_RS <= 0) {     
+        RS_resultE.innerHTML +=   `<div>error : already highest price</div>`;
+        
+    }
+    else {
+        RS_resultE.innerHTML += `<div> ${RS_nameE.value} RS:  ${parseFloat(result_RS).toFixed(2)}</div>`;
+        console.log(result_RS)        
+    }    
+});
+
 
 
 
