@@ -72,7 +72,7 @@ clearB.addEventListener('click',()=>{
 
 
 
-// 🍀 목표 %입력해서 얻는, 목표 가격 calculater 
+// 🍀 손절or익절 목표가격 calculater (목표 %입력해서 얻는)
 
 const nameE_limit = document.querySelector('.limit .name');
 
@@ -108,7 +108,7 @@ goB_limit.addEventListener('click',()=>{
         resultE_limitE.innerHTML += `<div>error : put the number please</div>`;
         
     } else {
-        resultE_limitE.innerHTML += `<div>손절or익절 목표가격 ${nameE_limit.value}  ${parseFloat(result_limit).toFixed(2)} $ </div>`;
+        resultE_limitE.innerHTML += `<div>손절or익절 목표가격: ${nameE_limit.value}  ${parseFloat(result_limit).toFixed(2)} $ </div>`;
         console.log(result_limit)        
     }    
 });
