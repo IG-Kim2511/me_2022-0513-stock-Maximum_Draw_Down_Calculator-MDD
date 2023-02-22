@@ -121,6 +121,55 @@ clearB_limit.addEventListener('click',()=>{
 
 
 
+// 🍀 손절or익절 목표 퍼센트 calculater 
+
+const nameE_target_price = document.querySelector('.target-price-container .name');
+
+const target_priceE = document.querySelector('.target-price-container .target-price');
+const now_priceE = document.querySelector('.target-price-container .now-price');
+// const target_percentE = document.querySelector('.limit .target-percent');
+// const now_averageE = document.querySelector('.limit .now-average');
+
+const resultE_target_priceE = document.querySelector('.target-price-container .result');
+const goB_target_price = document.querySelector('.target-price-container .go');
+const clearB_target_price =document.querySelector('.target-price-container .clear');
+
+let result_target_price = 0;
+console.log(typeof result_limit)
+
+goB_limit.addEventListener('click',()=>{
+
+    console.log(now_averageE.value)
+    console.log(target_percentE.value)
+    console.log(parseFloat(now_averageE.value))
+    console.log(typeof parseFloat(now_averageE.value))
+    console.log(typeof target_percentE.value)
+    
+    // 목표 가격 = 현재가격 + 현재가격 /100 * 목표 percent
+    result_limit = parseFloat(now_averageE.value) + (parseFloat(now_averageE.value)/100 * parseFloat(target_percentE.value));
+
+    console.log(result_limit)
+    console.log(typeof result_limit)
+    console.log(parseFloat(result_limit).toFixed(2))
+
+    // 🦄 isNaN(result)
+    if (isNaN(result_limit)) {
+        resultE_limitE.innerHTML += `<div>error : put the number please</div>`;
+        
+    } else {
+        resultE_limitE.innerHTML += `<div>손절or익절 목표가격: ${nameE_limit.value}  ${parseFloat(result_limit).toFixed(2)} $ </div>`;
+        console.log(result_limit)        
+    }    
+});
+
+clearB_limit.addEventListener('click',()=>{
+    target_percentE.value  = "";
+    now_averageE.value ="";
+    nameE_limit.value ="";
+});
+
+
+
 
 
 
