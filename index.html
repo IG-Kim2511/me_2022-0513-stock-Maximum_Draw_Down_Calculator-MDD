@@ -9,39 +9,8 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-
-    <!-- 🍀Calculator  👉js0208 -->
-
-    <div class="calculator">
-
-        <h1>calculator</h1>
-        
-        <input type="text" id="result">
-        <br><br>
-        <input type="button" value="1" onclick="document.getElementById('result').value+='1'">
-        <input type="button" value="2" onclick="document.getElementById('result').value+='2'">
-        <input type="button" value="3" onclick="document.getElementById('result').value+='3'">
-        <input type="button" value="+" onclick="document.getElementById('result').value+='+'">
-        <br>
-        <input type="button" value="4" onclick="document.getElementById('result').value+='4'">
-        <input type="button" value="5" onclick="document.getElementById('result').value+='5'">
-        <input type="button" value="6" onclick="document.getElementById('result').value+='6'">
-        <input type="button" value="-" onclick="document.getElementById('result').value+='-'">
-        <br>
-        <input type="button" value="7" onclick="document.getElementById('result').value+='7'">
-        <input type="button" value="8" onclick="document.getElementById('result').value+='8'">
-        <input type="button" value="9" onclick="document.getElementById('result').value+='9'">
-        <input type="button" value="*" onclick="document.getElementById('result').value+='*'">
-        <br>
-        <input type="button" value="C" onclick="document.getElementById('result').value=''">
-        <input type="button" value="0" onclick="document.getElementById('result').value+='0'">
-        <input type="button" value="=" onclick="document.getElementById('result').value=eval(document.getElementById('result').value)">
-        <input type="button" value="/" onclick="document.getElementById('result').value+='/'">
-      </div>
-
-      
       <!-- 🍀MDD -->
-    <section class="MDD">
+      <section class="MDD">
 
         <h1>Stock-Maximum Draw Down Calculator (MDD)</h1>
 
@@ -110,6 +79,58 @@
     </section> -->
 <!-- 🍀MDD -->
 
+    
+    <!-- 🍀limit order -->
+    <section class="limit">
+
+        <h1> 목표 %입력해서 얻는, 목표 가격 calculater </h1>
+        <h3>(손절or익절가격 구함)</h3>
+        <h3> 목표 가격 = 현재가격 + 현재가격 /100 * 목표 percent</h3>
+        <div>
+            <input type="text" class="name" placeholder="name">
+            <input type="text" class="target-percent" placeholder="목표 target-percent %">
+            <input type="text" class="now-average" placeholder="현재 average cost">
+            <div>
+                <button class="myBtn clear">clear</button>
+                <button class="myBtn go">go calc</button>
+            </div>
+            <h3 class="result">result</h3>
+        </div>
+
+    </section>
+
+
+    <!-- 🍀Calculator  👉js0208 -->
+
+    <div class="calculator">
+
+        <h1>calculator</h1>
+        
+        <input type="text" id="result">
+        <br><br>
+        <input type="button" value="1" onclick="document.getElementById('result').value+='1'">
+        <input type="button" value="2" onclick="document.getElementById('result').value+='2'">
+        <input type="button" value="3" onclick="document.getElementById('result').value+='3'">
+        <input type="button" value="+" onclick="document.getElementById('result').value+='+'">
+        <br>
+        <input type="button" value="4" onclick="document.getElementById('result').value+='4'">
+        <input type="button" value="5" onclick="document.getElementById('result').value+='5'">
+        <input type="button" value="6" onclick="document.getElementById('result').value+='6'">
+        <input type="button" value="-" onclick="document.getElementById('result').value+='-'">
+        <br>
+        <input type="button" value="7" onclick="document.getElementById('result').value+='7'">
+        <input type="button" value="8" onclick="document.getElementById('result').value+='8'">
+        <input type="button" value="9" onclick="document.getElementById('result').value+='9'">
+        <input type="button" value="*" onclick="document.getElementById('result').value+='*'">
+        <br>
+        <input type="button" value="C" onclick="document.getElementById('result').value=''">
+        <input type="button" value="0" onclick="document.getElementById('result').value+='0'">
+        <input type="button" value="=" onclick="document.getElementById('result').value=eval(document.getElementById('result').value)">
+        <input type="button" value="/" onclick="document.getElementById('result').value+='/'">
+      </div>
+
+      
+
 
     <!--🍀 RS 계산식 (와인슈타너) -->
 
@@ -150,24 +171,6 @@
 
     
 
-    
-    <!-- 🍀limit order -->
-    <section class="limit">
-
-        <h1> 목표 가격 limit order calculater </h1>
-        <h3> 목표 가격 = 현재가격 + 현재가격 /100 * 목표 percent</h3>
-        <div>
-            <input type="text" class="name" placeholder="name">
-            <input type="text" class="target-percent" placeholder="목표 target-percent %">
-            <input type="text" class="now-average" placeholder="현재 average cost">
-            <div>
-                <button class="myBtn clear">clear</button>
-                <button class="myBtn go">go calc</button>
-            </div>
-            <h3 class="result">result</h3>
-        </div>
-
-    </section>
 
 
 

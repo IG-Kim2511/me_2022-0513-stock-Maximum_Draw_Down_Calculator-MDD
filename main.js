@@ -1,17 +1,4 @@
 
-// 🍀js0208 calculator
-
-document
-.getElementById("result")
-.addEventListener("keyup", function (event) {
-  event.preventDefault();
-  if (event.keyCode === 13) {
-    document.getElementById("result").value = eval(
-      document.getElementById("result").value
-    );
-  }
-});
-
 
 // 🍀MDD Calculator
 //  = (52주 최고가 - 현재주가) / 52주 최고가 
@@ -82,43 +69,9 @@ clearB.addEventListener('click',()=>{
     nameE.value ="";
 });
 
-// 🍀RS calculater 
-
-const RS_nameE = document.querySelector('.RS .name');
-const RS_index = document.querySelector('.RS .index');
-const RS_stock = document.querySelector('.RS .stock');
-const RS_resultE = document.querySelector('.RS .result');
-
-const RS_goB = document.querySelector('.RS .go');
-const RS_clearB =document.querySelector('.RS .clear');
-
-let result_RS =0;
-RS_goB.addEventListener('click',()=>{
-  
-    result_RS = RS_index.value/ RS_stock.value
-
-    console.log(result_RS)
-    console.log(typeof result_RS)
-
-    
-    // 🦄 isNaN(result)
-    if (isNaN(result_RS)) {
-        RS_resultE.innerHTML += `<div>error : put the number please</div>`;
-        
-    } else if (result_RS <= 0) {     
-        RS_resultE.innerHTML +=   `<div>error : already highest price</div>`;
-        
-    }
-    else {
-        RS_resultE.innerHTML += `<div> ${RS_nameE.value} RS:  ${parseFloat(result_RS).toFixed(2)}</div>`;
-        console.log(result_RS)        
-    }    
-});
 
 
-
-
-// 🍀limit order calculater 
+// 🍀 목표 %입력해서 얻는, 목표 가격 calculater 
 
 const nameE_limit = document.querySelector('.limit .name');
 
@@ -154,7 +107,7 @@ goB_limit.addEventListener('click',()=>{
         resultE_limitE.innerHTML += `<div>error : put the number please</div>`;
         
     } else {
-        resultE_limitE.innerHTML += `<div> buy or sell limit order 목표가격 ${nameE_limit.value}  ${parseFloat(result_limit).toFixed(2)} $ </div>`;
+        resultE_limitE.innerHTML += `<div>손절or익절 목표가격 ${nameE_limit.value}  ${parseFloat(result_limit).toFixed(2)} $ </div>`;
         console.log(result_limit)        
     }    
 });
@@ -163,6 +116,58 @@ clearB_limit.addEventListener('click',()=>{
     target_percentE.value  = "";
     now_averageE.value ="";
     nameE_limit.value ="";
+});
+
+
+
+
+
+
+// 🍀js0208 calculator
+
+document
+.getElementById("result")
+.addEventListener("keyup", function (event) {
+  event.preventDefault();
+  if (event.keyCode === 13) {
+    document.getElementById("result").value = eval(
+      document.getElementById("result").value
+    );
+  }
+});
+
+
+// 🍀RS calculater 
+
+const RS_nameE = document.querySelector('.RS .name');
+const RS_index = document.querySelector('.RS .index');
+const RS_stock = document.querySelector('.RS .stock');
+const RS_resultE = document.querySelector('.RS .result');
+
+const RS_goB = document.querySelector('.RS .go');
+const RS_clearB =document.querySelector('.RS .clear');
+
+let result_RS =0;
+RS_goB.addEventListener('click',()=>{
+  
+    result_RS = RS_index.value/ RS_stock.value
+
+    console.log(result_RS)
+    console.log(typeof result_RS)
+
+    
+    // 🦄 isNaN(result)
+    if (isNaN(result_RS)) {
+        RS_resultE.innerHTML += `<div>error : put the number please</div>`;
+        
+    } else if (result_RS <= 0) {     
+        RS_resultE.innerHTML +=   `<div>error : already highest price</div>`;
+        
+    }
+    else {
+        RS_resultE.innerHTML += `<div> ${RS_nameE.value} RS:  ${parseFloat(result_RS).toFixed(2)}</div>`;
+        console.log(result_RS)        
+    }    
 });
 
 
