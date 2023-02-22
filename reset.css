@@ -158,6 +158,9 @@
   body {
     max-width: var(--width-main);
     text-align: center;
+
+    margin: auto;
+    
   
   
   
