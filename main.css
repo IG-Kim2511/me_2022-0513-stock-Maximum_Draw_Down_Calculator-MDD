@@ -29,54 +29,20 @@ section{
     padding: 2rem;
 }
 
-.MDD{
-    padding-top: 3rem;
-}
-
-.MDD h1,
-.MDD .result{
-    padding: 2rem;
-}
-
-.MDD input{
-    padding: 1rem;
-    margin: 0.5rem;
-    border: 1px solid black;
-
-    background-color: lightgray;
-    border-radius: 0.3rem;
-}
-
-
-.MDD button{
-    margin: 1rem;
-}
-
-
-
-.MDD .go{
-    background: green;
-
-}
-
-.MDD .clear{
-    background: lightcoral;
-
-}
 /* 🍀mdd */
 
-/* 🍀limit */
+/* 🍀calc */
 
-.limit{
+.calc{
     padding-top: 10rem;
 }
 
-.limit h1,
-.limit .result{
+.calc h1,
+.calc .result{
     padding: 2rem;
 }
 
-.limit input{
+.calc input{
     padding: 1rem;
     margin: 0.5rem;
     border: 1px solid black;
@@ -86,22 +52,24 @@ section{
 }
 
 
-.limit button{
+.calc button{
     margin: 1rem;
 }
 
 
 
-.limit .go{
+.calc .go{
     background: green;
 
 }
 
-.limit .clear{
+.calc .clear{
     background: lightcoral;
 
 }
 
+
+/*  */
 .button-container-parents {
 
     display: flex;

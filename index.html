@@ -10,7 +10,7 @@
 </head>
 <body>
       <!-- 🍀MDD -->
-      <section class="MDD">
+      <section class="MDD calc">
 
         <h1>Stock-Maximum Draw Down Calculator (MDD)</h1>
 
@@ -80,16 +80,16 @@
 <!-- 🍀MDD -->
 
     
-    <!-- 🍀limit order -->
-    <section class="limit">
+    <!-- 🍀손절or익절 목표가격  -->
+    <section class="limit calc">
 
         <h1> 손절or익절 목표가격 calculater (목표 %입력해서 얻는) </h1>
       
         <h3> 목표 가격 = 현재가격 + 현재가격 /100 * 목표 percent</h3>
         <div>
             <input type="text" class="name" placeholder="name">
-            <input type="text" class="target-percent" placeholder="목표 target-percent %">
-            <input type="text" class="now-average" placeholder="현재 average cost">
+            <input type="text" class="target-percent" placeholder="목표 퍼센트%">
+            <input type="text" class="now-average" placeholder="현재 가격">
             <div>
                 <button class="myBtn clear">clear</button>
                 <button class="myBtn go">go calc</button>
@@ -98,6 +98,28 @@
         </div>
 
     </section>
+ <!-- 🍀손절or익절 목표가격-->
+
+
+    <!-- 🍀손절or익절 목표 퍼센트  -->
+    <section class="target-price-container calc">
+
+        <h1> 손절or익절 목표 퍼센트 calculater (목표 가격 입력해서 얻는) </h1>
+      
+        <h3> x = 현재가격 / 손절or익절가격</h3>
+        <div>
+            <input type="text" class="name" placeholder="name">
+            <input type="text" class="target-price" placeholder="목표 가격">
+            <input type="text" class="now-price" placeholder="현재 가격">
+            <div>
+                <button class="myBtn clear">clear</button>
+                <button class="myBtn go">go calc</button>
+            </div>
+            <h3 class="result">result</h3>
+        </div>
+    </section>
+ <!-- 🍀손절or익절 목표 퍼센트  -->
+
 
 
     <!-- 🍀Calculator  👉js0208 -->
