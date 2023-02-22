@@ -32,10 +32,11 @@ goB.addEventListener('click',()=>{
     if (isNaN(result)) {
         resultE.innerHTML += `<div>error : put the number please</div>`;
         
-    } else if (result <= 0) {     
-        resultE.innerHTML +=   `<div>error : already highest price</div>`;
+    } 
+    // else if (result <= 0) {     
+    //     resultE.innerHTML +=   `<div>error : already highest price</div>`;
         
-    }
+    // }
     else {
         resultE.innerHTML += `<div> ${nameE.value}  : ${parseFloat(result).toFixed(2)}% </div>`;
         console.log(result)        
