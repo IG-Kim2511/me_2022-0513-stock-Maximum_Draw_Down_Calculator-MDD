@@ -33,10 +33,11 @@ goB.addEventListener('click',()=>{
         resultE.innerHTML += `<div>error : put the number please</div>`;
         
     } 
-    // else if (result <= 0) {     
-    //     resultE.innerHTML +=   `<div>error : already highest price</div>`;
+    // 최고점, 현재가격을 바꿔서 입력한때,  계산값이 달라짐... 그래서 이 코드 넣음
+    else if (result <= 0) {     
+        resultE.innerHTML +=   `<div>error : already highest price</div>`;
         
-    // }
+    }
     else {
         resultE.innerHTML += `<div> ${nameE.value}  : ${parseFloat(result).toFixed(2)}% </div>`;
         console.log(result)        
