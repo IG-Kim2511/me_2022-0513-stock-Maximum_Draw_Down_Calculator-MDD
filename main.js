@@ -72,7 +72,9 @@ clearB.addEventListener('click',()=>{
 });
 
 
-// 🍀 손절or익절 목표 퍼센트 calculater 
+// 🍀🍀QQQ가격으로 TQQQ손절가격 구하기 (순서)
+
+// 🍀1. 손절or익절 목표 퍼센트 Percent calculater (목표 가격 입력해서 얻는)
 
 const nameE_target_percent = document.querySelector('.target-percent-container .name');
 
@@ -88,10 +90,12 @@ const clearB_target_price =document.querySelector('.target-percent-container .cl
 let result_target_price = 0;
 
 goB_target_price.addEventListener('click',()=>{
+     
+    //  b는 a에서 몇퍼센트 감소한것인가?
+    // ((a - b) / a) * 100%
+    // ((now_priceE - target_priceE) / now_priceE) * 100%
 
- 
-    // x = 현재가격 / 손절or익절 목표가격
-    result_target_price = parseFloat(now_priceE.value) / parseFloat(target_priceE.value);
+    result_target_price =  ((now_priceE.value - target_priceE.value) / now_priceE.value) * 100;
 
 
     // 🦄 isNaN(result)
@@ -110,11 +114,9 @@ clearB_target_price.addEventListener('click',()=>{
     nameE_target_percent.value ="";
 });
 
-// 🍀 손절or익절 목표 퍼센트 calculater 
 
 
-
-// 🍀 손절or익절 목표가격 calculater (목표 %입력해서 얻는)
+// 🍀2. 손절or익절 목표 가격 Price calculater (목표 %입력해서 얻는)
 
 const nameE_limit = document.querySelector('.limit .name');
 
