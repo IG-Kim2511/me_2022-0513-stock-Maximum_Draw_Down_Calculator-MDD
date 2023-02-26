@@ -95,7 +95,7 @@ goB_target_price.addEventListener('click',()=>{
     // ((a - b) / a) * 100%
     // ((now_priceE - target_priceE) / now_priceE) * 100%
 
-    result_target_price =  ((now_priceE.value - target_priceE.value) / now_priceE.value) * 100;
+    result_target_price =  (-(( parseFloat(now_priceE.value) -  parseFloat(target_priceE.value)) /  parseFloat(now_priceE.value)) * 100);
 
 
     // 🦄 isNaN(result)
@@ -142,6 +142,7 @@ goB_limit.addEventListener('click',()=>{
     
     // 목표 가격 = 현재가격 + 현재가격 /100 * 목표 percent
     result_limit = parseFloat(now_averageE.value) + (parseFloat(now_averageE.value)/100 * parseFloat(target_percentE.value));
+
 
     console.log(result_limit)
     console.log(typeof result_limit)

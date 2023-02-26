@@ -49,10 +49,21 @@
 
         </div>
         <h3>result = (wkHighE - nowE) / wkHighE *100</h3>
-        <div>
-            <input type="text" class="name" placeholder="name">
-            <input type="text" class="wkHigh" placeholder="highest price or 52W high">
-            <input type="text" class="now" placeholder="Price now">
+        <div class="input_container">
+            <div>
+                <label for="name">name:</label>
+                <input type="text" class="name" placeholder="name">
+            </div>
+            <div>
+                <label for="wkHigh">highest price or 52W high:</label>
+                <input type="text" class="wkHigh" placeholder="highest price or 52W high">
+            </div>
+            <div>
+                <label for="now">Price now:</label>
+                <input type="text" class="now" placeholder="Price now">
+            <div>
+
+
             <div>
                 <button class="myBtn clear">clear</button>
                 <button class="myBtn go">go calc</button>
@@ -94,11 +105,23 @@
 
         <h1>1. 손절or익절 목표 <span class="highlighter">퍼센트 Percent</span> calculater (목표 가격 입력해서 얻는) </h1>
       
-        <h3> x = 현재가격 / 손절or익절 목표가격</h3>
-        <div>
-            <input type="text" class="name" placeholder="name">
-            <input type="text" class="target-price" placeholder="목표 가격">
-            <input type="text" class="now-price" placeholder="현재 가격">
+        <h3> b는 a에서 몇퍼센트 감소한것인가? <br>
+            ((a - b) / a) * 100% </h3>
+        <div class="input_container">
+           
+            <div>
+                <label for="name">name:</label>
+                <input type="text" class="name" placeholder="name">
+            </div>
+            <div>
+                <label for="target-price">목표 가격:</label>
+                <input type="text" class="target-price" placeholder="목표 가격">
+            </div>
+            <div>
+                <label for="now-price">Price now:</label>
+                <input type="text" class="now-price" placeholder="현재 가격">
+            <div>
+
             <div>
                 <button class="myBtn clear">clear</button>
                 <button class="myBtn go">go calc</button>
@@ -117,9 +140,24 @@
       
         <h3> 목표 가격 = 현재가격 + 현재가격 /100 * 목표 percent</h3>
         <div>
-            <input type="text" class="name" placeholder="name">
+            <!-- <input type="text" class="name" placeholder="name">
             <input type="text" class="target-percent" placeholder="목표 퍼센트%">
-            <input type="text" class="now-average" placeholder="현재 가격">
+            <input type="text" class="now-average" placeholder="현재 가격"> -->
+
+            <div>
+                <label for="name">name:</label>
+                <input type="text" class="name" placeholder="name">
+            </div>
+            <div>
+                <label for="target-percent">목표 퍼센트% :</label>
+                <input type="text" class="target-percent" placeholder="목표 퍼센트%">
+            </div>
+            <div>
+                <label for="now-average">현재 가격:</label>
+                <input type="text" class="now-average" placeholder="현재 가격">
+            <div>
+
+
             <div>
                 <button class="myBtn clear">clear</button>
                 <button class="myBtn go">go calc</button>
