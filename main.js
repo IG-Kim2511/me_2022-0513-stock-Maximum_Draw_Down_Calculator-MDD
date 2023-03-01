@@ -74,45 +74,45 @@ clearB.addEventListener('click',()=>{
 
 // 🍀🍀QQQ가격으로 TQQQ손절가격 구하기 (순서)
 
-// 🍀1. 손절or익절 목표 퍼센트 Percent calculater (목표 가격 입력해서 얻는)
+// // 🍀1. 손절or익절 목표 퍼센트 Percent calculater (목표 가격 입력해서 얻는)
 
-const nameE_target_percent = document.querySelector('.target-percent-container .name');
+// const nameE_target_percent = document.querySelector('.target-percent-container .name');
 
-const target_priceE = document.querySelector('.target-percent-container .target-price');
-const now_priceE = document.querySelector('.target-percent-container .now-price');
-// const target_percentE = document.querySelector('.limit .target-percent');
-// const now_averageE = document.querySelector('.limit .now-average');
+// const target_priceE = document.querySelector('.target-percent-container .target-price');
+// const now_priceE = document.querySelector('.target-percent-container .now-price');
+// // const target_percentE = document.querySelector('.limit .target-percent');
+// // const now_averageE = document.querySelector('.limit .now-average');
 
-const resultE_target_percentE = document.querySelector('.target-percent-container .result');
-const goB_target_price = document.querySelector('.target-percent-container .go');
-const clearB_target_price =document.querySelector('.target-percent-container .clear');
+// const resultE_target_percentE = document.querySelector('.target-percent-container .result');
+// const goB_target_price = document.querySelector('.target-percent-container .go');
+// const clearB_target_price =document.querySelector('.target-percent-container .clear');
 
-let result_target_price = 0;
+// let result_target_price = 0;
 
-goB_target_price.addEventListener('click',()=>{
+// goB_target_price.addEventListener('click',()=>{
      
-    //  b는 a에서 몇퍼센트 감소한것인가?
-    // ((a - b) / a) * 100%
-    // ((now_priceE - target_priceE) / now_priceE) * 100%
+//     //  b는 a에서 몇퍼센트 감소한것인가?
+//     // ((a - b) / a) * 100%
+//     // ((now_priceE - target_priceE) / now_priceE) * 100%
 
-    result_target_price =  (-(( parseFloat(now_priceE.value) -  parseFloat(target_priceE.value)) /  parseFloat(now_priceE.value)) * 100);
+//     result_target_price =  (-(( parseFloat(now_priceE.value) -  parseFloat(target_priceE.value)) /  parseFloat(now_priceE.value)) * 100);
 
 
-    // 🦄 isNaN(result)
-    if (isNaN(result_target_price)) {
-        resultE_target_percentE.innerHTML += `<div>error : put the number please</div>`;
+//     // 🦄 isNaN(result)
+//     if (isNaN(result_target_price)) {
+//         resultE_target_percentE.innerHTML += `<div>error : put the number please</div>`;
         
-    } else {
-        resultE_target_percentE.innerHTML += `<div>손절or익절 목표 퍼센트: ${nameE_target_percent.value}  ${parseFloat(result_target_price).toFixed(2)} % </div>`;
-        console.log(result_target_price)        
-    }    
-});
+//     } else {
+//         resultE_target_percentE.innerHTML += `<div>손절or익절 목표 퍼센트: ${nameE_target_percent.value}  ${parseFloat(result_target_price).toFixed(2)} % </div>`;
+//         console.log(result_target_price)        
+//     }    
+// });
 
-clearB_target_price.addEventListener('click',()=>{
-    target_priceE.value  = "";
-    now_priceE.value ="";
-    nameE_target_percent.value ="";
-});
+// clearB_target_price.addEventListener('click',()=>{
+//     target_priceE.value  = "";
+//     now_priceE.value ="";
+//     nameE_target_percent.value ="";
+// });
 
 
 

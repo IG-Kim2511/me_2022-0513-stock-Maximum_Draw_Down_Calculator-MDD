@@ -94,14 +94,16 @@
 
 <h1> 🍀🍀QQQ가격으로 TQQQ손절가격 구하기 (순서)</h1>
 
-<h3>QQQ에서 150이평선 가격으로 손절 퍼센트 구함 👉 <br>
-    TQQQ에 위의 손절 퍼센트 x3 넣어서 , TQQQ의 손절가격 구함
+<h3>QQQ에서 현재가격, 150이평선 가격 사용 (위의 MDD계산기 사용)<br>
+    👉 MDD 퍼센트 구함  <br>
+     👉 MDD퍼센트 + -0.5%(손절포인트) = 손절퍼센트 <br>
+     👉TQQQ(레버리지)의 경우, 손절 퍼센트 x3 넣어서 , TQQQ의 손절가격 구함
 </h3>
 
 
 
 <!-- 🍀손절or익절 목표 퍼센트  -->
-    <section class="target-percent-container calc">
+<!--     <section class="target-percent-container calc">
 
         <h1>1. 손절or익절 목표 <span class="highlighter">퍼센트 Percent</span> calculater (목표 가격 입력해서 얻는) </h1>
       
@@ -128,7 +130,7 @@
             </div>
             <h3 class="result">result</h3>
         </div>
-    </section>
+    </section> -->
  <!-- 🍀손절or익절 목표 퍼센트  -->
 
 
@@ -250,16 +252,18 @@
     <!-- explain -->
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <section>
+        <h2>Example) QQQ가격으로 TQQQ손절가격 구하기 </h2>
         <div>
-            <img src="./img/limit order 가격정하기  (1).jpg" alt="">
-            <img src="./img/limit order 가격정하기  (2).jpg" alt="">
-            <img src="./img/limit order 가격정하기  (3).jpg" alt="">
+            <img src="./img/손절or익절 목표 가격 Price calculater  (1).jpg" alt="">
+            <img src="./img/손절or익절 목표 가격 Price calculater  (2).jpg" alt="">
+  
         </div>
     </section>
 
 
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <section>
+        <h2>MDD 계산식 explain</h2>
         고점대비 하락률 계산법<br>
         = (52주 최고가 - 현재주가) / 52주 최고가 <br>
         → 애플 고점 대비 하락률<br>
