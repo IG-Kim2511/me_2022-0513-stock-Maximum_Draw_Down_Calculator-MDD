@@ -140,7 +140,7 @@ goB_limit.addEventListener('click',()=>{
     console.log(typeof parseFloat(now_averageE.value))
     console.log(typeof target_percentE.value)
     
-    // 목표 가격 = 현재가격 + 현재가격 /100 * 목표 percent
+    // 목표 가격 = 현재가격 + (현재가격 /100 * 목표 percent)
     result_limit = parseFloat(now_averageE.value) + (parseFloat(now_averageE.value)/100 * parseFloat(target_percentE.value));
 
 
