@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>localstorage (saving input value) and display </h1>
+    <label for="input">Enter Text:</label>
+    <input type="text" id="input">
+    <button onclick="save()">Save</button>
+    <button onclick="clearStorage()">Clear Storage</button>
+    <div id="output"></div>
+
+<script>
+    function save() {
+    // Get the input element
+    const input = document.getElementById("input");
+
+    // Get the input value
+    const inputValue = input.value;
+
+    // Get the existing array of values from localStorage or create a new array
+    const storedValues = JSON.parse(localStorage.getItem("inputValues")) || [];
+
+    // Push the new input value to the array
+    storedValues.push(inputValue);
+
+    // Store the updated array of values in localStorage
+    localStorage.setItem("inputValues", JSON.stringify(storedValues));
+
+    // Display the input values on the page
+    const output = document.getElementById("output");
+    output.innerHTML = "";
+    for (let i = 0; i < storedValues.length; i++) {
+        const newLine = document.createElement("p");
+        newLine.innerHTML = storedValues[i];
+        output.appendChild(newLine);
+    }
+
+    // Clear the input field
+    input.value = "";
+    }
+
+    function clearStorage() {
+    // Remove the "inputValues" key from localStorage
+    localStorage.removeItem("inputValues");
+
+    // Clear the output div
+    const output = document.getElementById("output");
+    output.innerHTML = "";
+    }
+
+    // Load saved values on page load
+    window.onload = function() {
+    const storedValues = JSON.parse(localStorage.getItem("inputValues")) || [];
+    const output = document.getElementById("output");
+    for (let i = 0; i < storedValues.length; i++) {
+        const newLine = document.createElement("p");
+        newLine.innerHTML = storedValues[i];
+        output.appendChild(newLine);
+    }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        // 🥒js45-30,-40,-50,-60, localStorage
+let cart = JSON.parse(localStorage.getItem("CART")) || [];
+
+
+function updateCart() {
+    renderCartItems();
+    renderSubtotal();
+
+    // 🍉js 45-10, js45-20
+    // localStorage.setItem('CART',cart);
+    localStorage.setItem('CART',JSON.stringify(cart));    
+}
+updateCart();
+
+//🍀localStorage.clear(); /  location.reload();    
+// 🥒js13-10,
+
+const deleteAllBtn = document.querySelector('.delete-all-btn');
+const checkoutBtn = document.querySelector('.checkoutBtn');
+
+deleteAllBtn.addEventListener('click',()=>{
+    localStorage.clear();
+    location.reload();    
+});
+
+checkoutBtn.addEventListener('click',()=>{
+    localStorage.clear();
+    location.reload();    
+   
+    alert(`Thank you`);
+
+});
+
+
+
+
+    </script>
+</body>
+</html>
