@@ -24,6 +24,7 @@ goB.addEventListener('click',()=>{
 
     result = (wkHighE.value - nowE.value) / wkHighE.value *100
 
+
     console.log(result)
     console.log(typeof result)
 
@@ -39,9 +40,10 @@ goB.addEventListener('click',()=>{
         
     }
     else {
-        resultE.innerHTML += `<div> ${nameE.value}  : ${parseFloat(result).toFixed(2)}% </div>`;
+        resultE.innerHTML += `<div> ${nameE.value}  : ${parseFloat(result).toFixed(3)}% </div>`;
         console.log(result)        
     }    
+
 });
 
 
@@ -103,7 +105,7 @@ clearB.addEventListener('click',()=>{
 //         resultE_target_percentE.innerHTML += `<div>error : put the number please</div>`;
         
 //     } else {
-//         resultE_target_percentE.innerHTML += `<div>손절or익절 목표 퍼센트: ${nameE_target_percent.value}  ${parseFloat(result_target_price).toFixed(2)} % </div>`;
+//         resultE_target_percentE.innerHTML += `<div>손절or익절 목표 퍼센트: ${nameE_target_percent.value}  ${parseFloat(result_target_price).toFixed(3)} % </div>`;
 //         console.log(result_target_price)        
 //     }    
 // });
@@ -146,14 +148,14 @@ goB_limit.addEventListener('click',()=>{
 
     console.log(result_limit)
     console.log(typeof result_limit)
-    console.log(parseFloat(result_limit).toFixed(2))
+    console.log(parseFloat(result_limit).toFixed(3))
 
     // 🦄 isNaN(result)
     if (isNaN(result_limit)) {
         resultE_limitE.innerHTML += `<div>error : put the number please</div>`;
         
     } else {
-        resultE_limitE.innerHTML += `<div>손절or익절 목표가격: ${nameE_limit.value}  ${parseFloat(result_limit).toFixed(2)} $ </div>`;
+        resultE_limitE.innerHTML += `<div>손절or익절 목표가격: ${nameE_limit.value}  ${parseFloat(result_limit).toFixed(3)} $ </div>`;
         console.log(result_limit)        
     }    
 });
@@ -209,7 +211,7 @@ RS_goB.addEventListener('click',()=>{
         
     }
     else {
-        RS_resultE.innerHTML += `<div> ${RS_nameE.value} RS:  ${parseFloat(result_RS).toFixed(2)}</div>`;
+        RS_resultE.innerHTML += `<div> ${RS_nameE.value} RS:  ${parseFloat(result_RS).toFixed(3)}</div>`;
         console.log(result_RS)        
     }    
 });
